@@ -10,12 +10,12 @@ export const factors = [
 ];
 export const defaults = [65, 42, 78, 50, 85, 72, 4, 250];
 export const scenarios = [
-  { title: 'The clerical error timeline', text: 'An intern puts Hanrui’s name on the wrong form. He is now a presidential candidate. Nobody wants to redo the paperwork.', multiplier: 4.7 },
-  { title: 'Rock. Paper. Presidency.', text: 'Hanrui wins an international rock-paper-scissors championship. The trophy comes with a suspicious amount of executive power.', multiplier: 19 },
-  { title: 'The meeting that never ended', text: 'Appointed Supreme Director of Extremely Important Meetings, Hanrui accidentally chairs the entire imaginary government.', multiplier: 8.2 },
-  { title: 'A minor time-machine incident', text: 'A malfunctioning time machine lands Hanrui at the inauguration of a country that has never existed. The sash fits perfectly.', multiplier: 43 },
-  { title: 'The nonexistent election', text: 'Hanrui accidentally wins an election that does not exist. Turnout: one. The voter: also Hanrui.', multiplier: 12 },
-  { title: 'The fantasy inauguration', text: 'In this explicitly fictional fantasy universe, everyone elects Hanrui. Even the ballot box applauds. A perfectly imaginary 100%.', multiplier: 1, fantasy: true },
+  { title: 'The clerical error timeline', text: 'An intern puts Supreme Leader Hanrui Chen’s name on the wrong form. He is now a candidate for Supreme Leader. Nobody wants to redo the paperwork.', multiplier: 4.7 },
+  { title: 'Rock. Paper. Supreme Leader.', text: 'Supreme Leader Hanrui Chen wins an international rock-paper-scissors championship. The trophy comes with a suspicious amount of executive power.', multiplier: 19 },
+  { title: 'The meeting that never ended', text: 'Appointed Supreme Director of Extremely Important Meetings, Supreme Leader Hanrui Chen accidentally chairs the entire government.', multiplier: 8.2 },
+  { title: 'A minor time-machine incident', text: 'A malfunctioning time machine lands Supreme Leader Hanrui Chen at the inauguration of a country that has never existed. The sash fits perfectly.', multiplier: 43 },
+  { title: 'The nonexistent election', text: 'Supreme Leader Hanrui Chen accidentally wins an election that does not exist. Turnout: one. The voter: also Supreme Leader Hanrui Chen.', multiplier: 12 },
+  { title: 'Hanrui Chen’s inauguration', text: 'In this timeline, everyone elects Supreme Leader Hanrui Chen. Even the ballot box applauds. A unanimous 100%.', multiplier: 1, fantasy: true },
 ];
 // FNV-style seed hash and a local PRNG: equal inputs always produce equal outputs.
 export function randomFrom(seed: string) {
@@ -38,7 +38,7 @@ export const achievementInfo = [
   { id: 'potato', name: 'Diplomatic Potato', description: 'Reach at least 1 charisma.', icon: '🥔' },
   { id: 'mystery', name: 'International Mystery Man', description: 'Max out political plot armor.', icon: '🕶️' },
   { id: 'tiny', name: 'Statistical Impossibility', description: 'Calculate a probability below 0.000001%.', icon: '🚀' },
-  { id: 'president', name: 'Alternate Universe President', description: 'Discover the 100% fictional fantasy timeline.', icon: '👑' },
+  { id: 'president', name: 'Supreme Leader Hanrui Chen', description: 'Discover Hanrui Chen’s 100% inauguration timeline.', icon: '👑' },
   { id: 'broken', name: 'Economist’s Worst Nightmare', description: 'Calculate with every factor at maximum, or break mathematics.', icon: '📉' },
 ];
 export function unlockedFor(values: number[], p: number) { return [values[0] >= 1 && 'potato', values[1] === 100 && 'mystery', p < 1e-6 && 'tiny', p >= 100 && 'president', (values.every((v,i) => v === factors[i].max) || p > 100) && 'broken'].filter(Boolean) as string[]; }
