@@ -26,6 +26,10 @@ jobs:
       - run: npm ci
       - run: npm test
       - run: npm run build
+      - name: Install Chromium for production smoke checks
+        run: npx playwright install --with-deps chromium
+      - name: Verify the Pages artifact in Chromium
+        run: npm run test:pages
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
