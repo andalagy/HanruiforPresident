@@ -13,6 +13,7 @@ test('zero factors preserve the tiny baseline and sliders change it', () => {
 });
 test('100% only occurs in the explicitly fictional fantasy timeline', () => {
   assert.equal(simulate(defaults, '42', false, 5).probability, 100);
+  assert.equal(simulate(defaults, '7', false, timelineFor('7', 0)).probability, 100);
   assert.ok(simulate(factors.map(f => f.max), '42', true, 3).probability < 100);
 });
 test('all five achievements have reachable triggers', () => {

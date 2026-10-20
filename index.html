@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#004789" />
-    <meta name="description" content="The central portal of Supreme Leader Hanrui Chen. Destiny calculator, intelligence bulletins, historical archive, and honors." />
-    <title>Supreme Leader Hanrui Chen — Central Portal</title>
+    <meta name="description" content="最高领袖陈汉瑞的中央门户：命运计算、情报通报、历史档案与荣誉殿堂。" />
+    <title>最高领袖陈汉瑞 — 中央门户</title>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23004789'/%3E%3Cpath d='M16 3L19 13L29 16L19 19L16 29L13 19L3 16L13 13Z' fill='%23ed1c27'/%3E%3C/svg%3E" />
     <style>
       html,body{margin:0;background:#e6edf5;color:#17365b}
@@ -18,11 +18,11 @@
     <!-- Kept visible until React mounts, including when an asset fails to load. -->
     <div id="root">
       <main class="startup-shell" id="startup-shell">
-        <p>CENTRAL INFORMATION BUREAU</p>
-        <h1>SUPREME LEADER HANRUI CHEN</h1>
-        <p id="startup-status" role="status">Opening the Hanrui Chen central portal…</p>
-        <button id="startup-retry" type="button" hidden onclick="location.reload()">Reload the portal</button>
-        <noscript><p>JavaScript is required to operate the destiny calculator. Enable JavaScript and reload this page.</p></noscript>
+        <p>中央新闻局</p>
+        <h1>最高领袖陈汉瑞</h1>
+        <p id="startup-status" role="status">正在打开陈汉瑞中央门户……</p>
+        <button id="startup-retry" type="button" hidden onclick="location.reload()">重新加载门户</button>
+        <noscript><p>命运计算器需要启用 JavaScript。请在浏览器中启用 JavaScript 后重新加载本页。</p></noscript>
       </main>
     </div>
     <script>
@@ -31,7 +31,7 @@
           const status = document.getElementById('startup-status');
           const retry = document.getElementById('startup-retry');
           if (!status || !retry) return;
-          status.textContent = 'The interactive portal could not open. Reload the page to try again. If this continues, a new deployment may still be updating.';
+          status.textContent = '互动门户暂时无法打开，请重新加载页面。若问题持续，网站可能仍在更新部署。';
           retry.hidden = false;
         }
         window.addEventListener('error', event => {
